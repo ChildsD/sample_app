@@ -4,7 +4,8 @@ gem 'rails', '3.2.2'
 gem 'gravatar_image_tag'
 
 # The gem below was originally gem 'will_paginate', '3.0.pre2' but there was a bug or 
-# something but there was a patch I found here: # http://stackoverflow.com/questions/6382966/will-paginate-conflict-rails-3-1-0-rc4
+# something but there was a patch I found here:
+# http://stackoverflow.com/questions/6382966/will-paginate-conflict-rails-3-1-0-rc4
 gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 
 group :production do
