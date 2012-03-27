@@ -17,6 +17,8 @@ SampleApp::Application.configure do
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   # THIS WAS SET TO false BUT HEROKU WASN'T WORKING SO I SET IT TO true (3/27)
+  # UPDATE: SHORTLY AFTER MAKING THAT CHANGE HEROKU WORKED
+  # (could have been something else though, like precompiling or something)
   config.assets.compile = true
 
   # Generate digests for assets URLs
