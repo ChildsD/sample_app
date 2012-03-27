@@ -15,7 +15,7 @@ end
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
-	gem 'annotate'
+	gem 'annotate', '~> 2.4.1.beta'
 	gem 'faker'
 end
 
