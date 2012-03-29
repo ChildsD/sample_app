@@ -22,7 +22,6 @@ end
 group :test do
 	gem 'rspec-rails'
 	gem 'webrat'
-	gem 'spork'
 	gem 'factory_girl_rails'
 	gem 'spork'
 	gem 'autotest', '4.4.6'
