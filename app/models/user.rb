@@ -38,6 +38,51 @@ class User < ActiveRecord::Base
       return nil if user.nil?
       return user if user.has_password?(submitted_password)
     end
+    
+    #The following 5 authentications are from the Ch 7 exercises
+    
+    #Listing 7.27
+    def User.authenticate(email, submitted_password)
+        user = find_by_email(email)
+        return nil  if user.nil?
+        return user if user.has_password?(submitted_password)
+    end
+    
+    #Listing 7.28
+    def self.authenticate(email, submitted_password)
+        user = find_by_email(email)
+        return nil  if user.nil?
+        return user if user.has_password?(submitted_password)
+        return nil
+    end
+    
+    #Listing 7.29
+    def self.authenticate(email, submitted_password)
+        user = find_by_email(email)
+        if user.nil?
+          nil
+        elsif user.has_password?(submitted_password)
+          user
+        else
+          nil
+        end
+    end
+    
+    #Listing 7.30
+    def self.authenticate(email, submitted_password)
+        user = find_by_email(email)
+        if user.nil?
+          nil
+        elsif user.has_password?(submitted_password)
+          user
+        end
+    end
+    
+    #Listing 7.31
+    def self.authenticate(email, submitted_password)
+        user = find_by_email(email)
+        user && user.has_password?(submitted_password) ? user : nil
+    end
   
   private
   
